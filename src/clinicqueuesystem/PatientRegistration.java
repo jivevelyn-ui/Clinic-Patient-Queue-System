@@ -385,7 +385,7 @@ public class PatientRegistration extends javax.swing.JFrame {
 
             // Calculate age
             java.time.LocalDate birthDate =
-                    java.time.LocalDate.parse(dob);
+            java.time.LocalDate.parse(txtDOB.getText().trim());
 
             java.time.LocalDate today =
                     java.time.LocalDate.now();
@@ -398,6 +398,8 @@ public class PatientRegistration extends javax.swing.JFrame {
 
             int age = java.time.Period.between(
                     birthDate, today).getYears();
+
+            txtAge.setText(String.valueOf(age));
 
             // Generate random Patient ID
             int randomID = (int) (Math.random() * 900000) + 100000;
