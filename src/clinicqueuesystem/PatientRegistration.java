@@ -401,11 +401,11 @@ public class PatientRegistration extends javax.swing.JFrame {
 
             txtAge.setText(String.valueOf(age));
 
-            // Generate random Patient ID
+            // Generate random Patient ID            
             int randomID = (int) (Math.random() * 900000) + 100000;
             String patientID = "P-" + randomID;
 
-            // Generate random Queue Number
+           // Generate random Queue Number
             int queueNumber = (int) (Math.random() * 9000) + 1000;
 
             // Get gender
