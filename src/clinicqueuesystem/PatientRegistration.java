@@ -8,16 +8,23 @@ public class PatientRegistration extends javax.swing.JFrame {
         initComponents();
 
         this.manager = manager;
+        
+        txtID.setEditable(false);
+        txtQueue.setEditable(false);
+        txtAge.setEditable(false);
+
+        txtID.setText("AUTO-GENERATED");
+        txtQueue.setText("AUTO-GENERATED");
  
         txtID.setEditable(false);
         txtQueue.setEditable(false);
         txtAge.setEditable(false);
 
-    txtID.setText("AUTO-GENERATED");
-    txtQueue.setText("AUTO-GENERATED");
+        txtID.setText("AUTO-GENERATED");
+        txtQueue.setText("AUTO-GENERATED");
 
-    buttonGroup1.clearSelection();
-    buttonGroup2.clearSelection();
+        buttonGroup1.clearSelection();
+        buttonGroup2.clearSelection();
 }
 
     /**
