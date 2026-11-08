@@ -7,7 +7,10 @@ public class Main {
         PatientManager manager = new PatientManager();
 
         java.awt.EventQueue.invokeLater(() -> {
-            new PatientRegistration(manager).setVisible(true);
+
+            new QueueManagementDashboard(manager)
+                    .setVisible(true);
+
         });
     }
 }

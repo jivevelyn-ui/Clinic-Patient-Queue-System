@@ -1,22 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package clinicqueuesystem;
 
-/**
- *
- * @author evely
- */
 public class QueueManagementDashboard extends javax.swing.JFrame {
-    private PatientManager manager;
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(QueueManagementDashboard.class.getName());
 
-    /**
-     * Creates new form QueueManagementDashboard
-     */
+    private PatientManager manager;
+
     public QueueManagementDashboard() {
-    this(new PatientManager());
+        this(new PatientManager());
     }
 
     public QueueManagementDashboard(PatientManager manager) {
@@ -24,17 +13,13 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
 
         this.manager = manager;
 
-        // Set text areas to read-only
         txtLane1.setEditable(false);
         txtLane2.setEditable(false);
         txtLane3.setEditable(false);
         txtLane4.setEditable(false);
 
-        // Display the waiting patients
         refreshQueues();
     }
-        }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -400,7 +385,7 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
                 }
             }
         } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
-            logger.log(java.util.logging.Level.SEVERE, null, ex);
+            ex.printStackTrace();
         }
         //</editor-fold>
 
@@ -433,44 +418,46 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
     private javax.swing.JTextArea txtLane3;
     private javax.swing.JTextArea txtLane4;
     // End of variables declaration//GEN-END:variables
-// Refresh all four waiting lanes
-private void refreshQueues() {
 
-    displayLane(1, txtLane1);
-    displayLane(2, txtLane2);
-    displayLane(3, txtLane3);
-    displayLane(4, txtLane4);
-}
+    // Refresh all four waiting lanes
+    private void refreshQueues() {
 
-// Display patients in a specific lane
-private void displayLane(int laneNumber,
-                         javax.swing.JTextArea textArea) {
-
-    PatientQueue queue = manager.getLane(laneNumber);
-
-    StringBuilder display = new StringBuilder();
-
-    display.append("QUEUE NO.     PATIENT ID\n");
-    display.append("------------------------------\n");
-
-    if (queue.isEmpty()) {
-
-        display.append("No waiting patients.");
-
-    } else {
-
-        for (int i = 0; i < queue.getSize(); i++) {
-
-            Patient patient = queue.getAt(i);
-
-            display.append("Q-")
-                    .append(patient.getQueueNumber())
-                    .append("       ")
-                    .append(patient.getPatientId())
-                    .append("\n");
-        }
+        displayLane(1, txtLane1);
+        displayLane(2, txtLane2);
+        displayLane(3, txtLane3);
+        displayLane(4, txtLane4);
     }
 
-    textArea.setText(display.toString());
+    // Display patients in a specific lane
+    private void displayLane(int laneNumber,
+                             javax.swing.JTextArea textArea) {
+
+        PatientQueue queue = manager.getLane(laneNumber);
+
+        StringBuilder display = new StringBuilder();
+
+        display.append("QUEUE NO.     PATIENT ID\n");
+        display.append("------------------------------\n");
+
+        if (queue.isEmpty()) {
+
+            display.append("No waiting patients.");
+
+        } else {
+
+            for (int i = 0; i < queue.getSize(); i++) {
+
+                Patient patient = queue.getAt(i);
+
+                display.append("Q-")
+                        .append(patient.getQueueNumber())
+                        .append("       ")
+                        .append(patient.getPatientId())
+                        .append("\n");
+            }
+        }
+
+        textArea.setText(display.toString());
+    }
 }
-}
+
