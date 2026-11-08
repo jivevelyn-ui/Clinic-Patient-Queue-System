@@ -408,6 +408,9 @@ public class PatientRegistration extends javax.swing.JFrame {
            // Generate random Queue Number
             int queueNumber = (int) (Math.random() * 9000) + 1000;
 
+            txtID.setText(patientID);
+            txtQueue.setText(String.valueOf(queueNumber));
+            
             // Get gender
             String gender = rbtnMale.isSelected()
                     ? "Male" : "Female";
@@ -479,9 +482,6 @@ public class PatientRegistration extends javax.swing.JFrame {
             buttonGroup1.clearSelection();
             buttonGroup2.clearSelection();
 
-            txtAge.setText("");
-            txtID.setText("AUTO-GENERATED");
-            txtQueue.setText("AUTO-GENERATED");
 
         } catch (java.time.format.DateTimeParseException e) {
 
