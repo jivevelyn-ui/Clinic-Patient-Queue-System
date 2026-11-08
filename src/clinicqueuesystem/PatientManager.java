@@ -2,14 +2,17 @@ package clinicqueuesystem;
 
 public class PatientManager {
 
+    // Four independent patient queues
     private PatientQueue lane1;
     private PatientQueue lane2;
     private PatientQueue lane3;
     private PatientQueue lane4;
 
+    // Alternating assignment when queue sizes are equal
     private boolean nextPriorityLane1 = true;
     private boolean nextRegularLane3 = true;
 
+    // Constructor
     public PatientManager() {
 
         lane1 = new PatientQueue();
@@ -64,24 +67,29 @@ public class PatientManager {
         return -1;
     }
 
-    // Get queue based on lane number
+    // Get a specific lane
     public PatientQueue getLane(int laneNumber) {
 
         switch (laneNumber) {
+
             case 1:
                 return lane1;
+
             case 2:
                 return lane2;
+
             case 3:
                 return lane3;
+
             case 4:
                 return lane4;
+
             default:
                 return null;
         }
     }
 
-    // Call next patient from a specific lane
+    // Call next patient
     public Patient callNextPatient(int laneNumber) {
 
         PatientQueue queue = getLane(laneNumber);
@@ -106,7 +114,10 @@ public class PatientManager {
 
                 Patient patient = lanes[i].getAt(j);
 
-                if (patient.getPatientId().equalsIgnoreCase(patientId)) {
+                if (patient != null
+                        && patient.getPatientId()
+                        .equalsIgnoreCase(patientId)) {
+
                     return patient;
                 }
             }
