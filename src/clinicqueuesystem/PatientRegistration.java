@@ -13,15 +13,12 @@ public class PatientRegistration extends javax.swing.JFrame {
         txtQueue.setEditable(false);
         txtAge.setEditable(false);
 
-        txtID.setText("AUTO-GENERATED");
-        txtQueue.setText("AUTO-GENERATED");
+        txtID.setText("");
+        txtQueue.setText("");
  
         txtID.setEditable(false);
         txtQueue.setEditable(false);
         txtAge.setEditable(false);
-
-        txtID.setText("AUTO-GENERATED");
-        txtQueue.setText("AUTO-GENERATED");
 
         buttonGroup1.clearSelection();
         buttonGroup2.clearSelection();
@@ -330,9 +327,9 @@ public class PatientRegistration extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnRegister)
-                    .addComponent(btnReturn))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnReturn)
+                    .addComponent(btnRegister))
                 .addContainerGap(18, Short.MAX_VALUE))
         );
 
