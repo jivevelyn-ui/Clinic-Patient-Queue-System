@@ -22,8 +22,16 @@ public class PatientRegistration extends javax.swing.JFrame {
 
         buttonGroup1.clearSelection();
         buttonGroup2.clearSelection();
-}
-
+        
+        btnReturn.setText("Return to Dashboard");
+        
+        btnReturn.addActionListener(new java.awt.event.ActionListener() {
+        
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            btnReturnActionPerformed(evt);
+        }
+    });
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -346,156 +354,161 @@ public class PatientRegistration extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    
+
 
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
+
         try {
 
-            // Get patient information
-            String name = txtName.getText().trim();
-            String dob = txtDOB.getText().trim();
-            String address = txtAddress.getText().trim();
+        // Get patient information
+        String name = txtName.getText().trim();
+        String dob = txtDOB.getText().trim();
+        String address = txtAddress.getText().trim();
 
-            // Validate required fields
-            if (name.isEmpty() || dob.isEmpty() || address.isEmpty()) {
-                javax.swing.JOptionPane.showMessageDialog(
-                        this, "Please complete all required fields.");
-                return;
-            }
-
-            // Validate gender
-            if (!rbtnMale.isSelected() && !rbtnFemale.isSelected()) {
-                javax.swing.JOptionPane.showMessageDialog(
-                        this, "Please select a gender.");
-                return;
-            }
-
-            // Validate classification
-            if (!rbtnPregnant.isSelected()
-                    && !rbtnPWD.isSelected()
-                    && !rbtnSenior.isSelected()
-                    && !rbtnNone.isSelected()) {
-
-                javax.swing.JOptionPane.showMessageDialog(
-                        this, "Please select a classification.");
-                return;
-            }
-
-            // Calculate age
-            java.time.LocalDate birthDate =
-            java.time.LocalDate.parse(txtDOB.getText().trim());
-
-            java.time.LocalDate today =
-                    java.time.LocalDate.now();
-
-            if (birthDate.isAfter(today)) {
-                javax.swing.JOptionPane.showMessageDialog(
-                        this, "Birthdate cannot be in the future.");
-                return;
-            }
-
-            int age = java.time.Period.between(
-                    birthDate, today).getYears();
-
-            txtAge.setText(String.valueOf(age));
-
-            // Generate random Patient ID            
-            int randomID = (int) (Math.random() * 900000) + 100000;
-            String patientID = "P-" + randomID;
-
-           // Generate random Queue Number
-            int queueNumber = (int) (Math.random() * 9000) + 1000;
-
-            txtID.setText(patientID);
-            txtQueue.setText(String.valueOf(queueNumber));
-            
-            // Get gender
-            String gender = rbtnMale.isSelected()
-                    ? "Male" : "Female";
-
-            // Get classification
-            String classification;
-
-            if (rbtnPregnant.isSelected()) {
-                classification = "Pregnant";
-            } else if (rbtnPWD.isSelected()) {
-                classification = "PWD";
-            } else if (rbtnSenior.isSelected()) {
-                classification = "Senior";
-            } else {
-                classification = "Regular";
-            }
-
-            // Register patient according to classification
-            int assignedLane;
-
-            if (!classification.equals("Regular")) {
-
-                PriorityPatient patient = new PriorityPatient(
-                        patientID, name, age, dob, address,
-                        queueNumber, classification, gender,
-                        classification
-                );
-
-                assignedLane = manager.addPriorityPatient(patient);
-
-            } else {
-
-                RegularPatient patient = new RegularPatient(
-                        patientID, name, age, dob, address,
-                        queueNumber, classification, gender
-                );
-
-                assignedLane = manager.addRegularPatient(patient);
-            }
-
-            // Check registration result
-            if (assignedLane == -1) {
-
-                javax.swing.JOptionPane.showMessageDialog(
-                        this, "The selected queues are full.");
-                return;
-            }
-
-            // Display generated information
-            txtAge.setText(String.valueOf(age));
-            txtID.setText(patientID);
-            txtQueue.setText(String.valueOf(queueNumber));
-
+        // Validate required fields
+        if (name.isEmpty() || dob.isEmpty() || address.isEmpty()) {
             javax.swing.JOptionPane.showMessageDialog(
-                    this,
-                    "PATIENT SUCCESSFULLY REGISTERED!\n\n"
-                    + "Patient ID: " + patientID + "\n"
-                    + "Queue Number: " + queueNumber + "\n"
-                    + "Classification: " + classification + "\n"
-                    + "Assigned Lane: " + assignedLane
-            );
-
-            // Clear form after registration
-            txtName.setText("");
-            txtDOB.setText("");
-            txtAddress.setText("");
-
-            
-            buttonGroup1.clearSelection();
-            buttonGroup2.clearSelection();
-
-
-        } catch (java.time.format.DateTimeParseException e) {
-
-            javax.swing.JOptionPane.showMessageDialog(
-                    this,
-                    "Invalid birthdate. Use YYYY-MM-DD format."
-            );
-
-        } catch (Exception e) {
-
-            javax.swing.JOptionPane.showMessageDialog(
-                    this,
-                    "Registration error: " + e.getMessage()
-            );
+                    this, "Please complete all required fields.");
+            return;
         }
 
+        // Validate gender
+        if (!rbtnMale.isSelected() && !rbtnFemale.isSelected()) {
+            javax.swing.JOptionPane.showMessageDialog(
+                    this, "Please select a gender.");
+            return;
+        }
+
+        // Validate classification
+        if (!rbtnPregnant.isSelected()
+                && !rbtnPWD.isSelected()
+                && !rbtnSenior.isSelected()
+                && !rbtnNone.isSelected()) {
+
+            javax.swing.JOptionPane.showMessageDialog(
+                    this, "Please select a classification.");
+            return;
+        }
+
+        // Calculate age
+        java.time.LocalDate birthDate =
+                java.time.LocalDate.parse(dob);
+
+        java.time.LocalDate today =
+                java.time.LocalDate.now();
+
+        if (birthDate.isAfter(today)) {
+            javax.swing.JOptionPane.showMessageDialog(
+                    this, "Birthdate cannot be in the future.");
+            return;
+        }
+
+        int age = java.time.Period.between(
+                birthDate, today).getYears();
+
+        txtAge.setText(String.valueOf(age));
+
+        // Generate Patient ID
+        int randomID = (int) (Math.random() * 900000) + 100000;
+        String patientID = "P-" + randomID;
+
+        // Generate Queue Number
+        int queueNumber = (int) (Math.random() * 9000) + 1000;
+
+        txtID.setText(patientID);
+        txtQueue.setText(String.valueOf(queueNumber));
+
+        // Get gender
+        String gender = rbtnMale.isSelected()
+                ? "Male" : "Female";
+
+        // Get classification
+        String classification;
+
+        if (rbtnPregnant.isSelected()) {
+            classification = "Pregnant";
+        } else if (rbtnPWD.isSelected()) {
+            classification = "PWD";
+        } else if (rbtnSenior.isSelected()) {
+            classification = "Senior";
+        } else {
+            classification = "Regular";
+        }
+
+        // Register patient according to classification
+        int assignedLane;
+
+        if (!classification.equals("Regular")) {
+
+            PriorityPatient patient = new PriorityPatient(
+                    patientID, name, age, dob, address,
+                    queueNumber, classification, gender,
+                    classification
+            );
+
+            assignedLane = manager.addPriorityPatient(patient);
+
+        } else {
+
+            RegularPatient patient = new RegularPatient(
+                    patientID, name, age, dob, address,
+                    queueNumber, classification, gender
+            );
+
+            assignedLane = manager.addRegularPatient(patient);
+        }
+
+        // Check registration result
+        if (assignedLane == -1) {
+            javax.swing.JOptionPane.showMessageDialog(
+                    this, "The selected queues are full.");
+            return;
+        }
+
+        // Display generated information
+        txtAge.setText(String.valueOf(age));
+        txtID.setText(patientID);
+        txtQueue.setText(String.valueOf(queueNumber));
+
+        javax.swing.JOptionPane.showMessageDialog(
+                this,
+                "PATIENT SUCCESSFULLY REGISTERED!\n\n"
+                + "Patient ID: " + patientID + "\n"
+                + "Queue Number: " + queueNumber + "\n"
+                + "Classification: " + classification + "\n"
+                + "Assigned Lane: " + assignedLane
+        );
+
+        // Clear form after registration
+        txtName.setText("");
+        txtDOB.setText("");
+        txtAddress.setText("");
+
+        buttonGroup1.clearSelection();
+        buttonGroup2.clearSelection();
+
+    } catch (java.time.format.DateTimeParseException e) {
+
+        javax.swing.JOptionPane.showMessageDialog(
+                this,
+                "Invalid birthdate. Use YYYY-MM-DD format."
+        );
+
+    } catch (Exception e) {
+        javax.swing.JOptionPane.showMessageDialog(
+                this,
+                "Registration error: " + e.getMessage()
+        );
+    }
     }//GEN-LAST:event_btnRegisterActionPerformed
+        private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {
+            QueueManagementDashboard dashboard =
+                    new QueueManagementDashboard(manager);
+
+            dashboard.setVisible(true);
+            this.dispose();
+        }
 
     private void txtQueueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtQueueActionPerformed
         // TODO add your handling code here:
@@ -563,9 +576,8 @@ public class PatientRegistration extends javax.swing.JFrame {
          PatientManager manager = new PatientManager();
          new PatientRegistration(manager).setVisible(true);
         });
-        
     }
-
+        
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnRegister;
     private javax.swing.JButton btnReturn;
@@ -603,3 +615,4 @@ public class PatientRegistration extends javax.swing.JFrame {
     private javax.swing.JTextField txtQueue;
     // End of variables declaration//GEN-END:variables
 }
+
