@@ -16,6 +16,29 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
 
         refreshQueues();
     }
+    private void callNextPatient(int laneNumber) {
+
+    Patient patient = manager.callNextPatient(laneNumber);
+
+    if (patient == null) {
+
+        javax.swing.JOptionPane.showMessageDialog(
+            this,
+            "No waiting patients in Lane " + laneNumber + "."
+        );
+
+    } else {
+
+        javax.swing.JOptionPane.showMessageDialog(
+            this,
+            "Patient marked as served.\n"
+            + "Queue Number: " + patient.getQueueNumber()
+            + "\nPatient ID: " + patient.getPatientId()
+        );
+    }
+
+    refreshQueues();
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -47,7 +70,7 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
         txtQueue2Lane1 = new javax.swing.JTextField();
         txtQueue3Lane1 = new javax.swing.JTextField();
         btnLane1callnext = new javax.swing.JButton();
-        txtQueue1Lane4 = new javax.swing.JTextField();
+        txtQueue1Lane1 = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         txtPatientID1Lane1 = new javax.swing.JTextField();
@@ -290,9 +313,9 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
             }
         });
 
-        txtQueue1Lane4.addActionListener(new java.awt.event.ActionListener() {
+        txtQueue1Lane1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtQueue1Lane4ActionPerformed(evt);
+                txtQueue1Lane1ActionPerformed(evt);
             }
         });
 
@@ -338,7 +361,7 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
                     .addComponent(txtQueue3Lane1, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)
                     .addComponent(txtQueue2Lane1, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtQueue4Lane1, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtQueue1Lane4, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addComponent(txtQueue1Lane1, javax.swing.GroupLayout.Alignment.LEADING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtPatientID1Lane1)
@@ -366,7 +389,7 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
                     .addComponent(jLabel13))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtQueue1Lane4, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtQueue1Lane1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtPatientID1Lane1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -825,87 +848,56 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLane1callnextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLane1callnextActionPerformed
-        Patient patient = manager.callNextPatient(1);
-
-        if (patient == null) {
-            javax.swing.JOptionPane.showMessageDialog(
-                this, "No waiting patients in Lane 1."
-            );
-        } else {
-            javax.swing.JOptionPane.showMessageDialog(
-                this,
-                "Now Serving\n"
-                + "Queue Number: " + patient.getQueueNumber()
-                + "\nPatient ID: " + patient.getPatientId()
-            );
-        }
-
-        refreshQueues();
+        callNextPatient(1);
     }//GEN-LAST:event_btnLane1callnextActionPerformed
 
     private void btnRegistrationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrationActionPerformed
-        // TODO add your handling code here:
+            PatientRegistration registration =
+                new PatientRegistration(manager);
+
+        registration.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnRegistrationActionPerformed
 
     private void btnSearchPatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchPatientActionPerformed
-        // TODO add your handling code here:
+            String patientId = javax.swing.JOptionPane.showInputDialog(
+                this,
+                "Enter Patient ID:"
+            );
+
+            if (patientId == null || patientId.trim().isEmpty()) {
+                return;
+            }
+
+            Patient patient = manager.searchPatient(patientId.trim());
+
+            if (patient == null) {
+
+                javax.swing.JOptionPane.showMessageDialog(
+                    this,
+                    "Patient not found in the waiting queues."
+                );
+
+            } else {
+
+                javax.swing.JOptionPane.showMessageDialog(
+                    this,
+                    "Patient Found!\n"
+                    + "Patient ID: " + patient.getPatientId()
+                    + "\nQueue Number: " + patient.getQueueNumber()
+                );
     }//GEN-LAST:event_btnSearchPatientActionPerformed
 
     private void btnLane2callnextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLane2callnextActionPerformed
-        Patient patient = manager.callNextPatient(1);
-
-        if (patient == null) {
-            javax.swing.JOptionPane.showMessageDialog(
-                this, "No waiting patients in Lane 2."
-            );
-        } else {
-            javax.swing.JOptionPane.showMessageDialog(
-                this,
-                "Now Serving\n"
-                + "Queue Number: " + patient.getQueueNumber()
-                + "\nPatient ID: " + patient.getPatientId()
-            );
-        }
-
-        refreshQueues();
+        callNextPatient(2);
     }//GEN-LAST:event_btnLane2callnextActionPerformed
 
     private void btnLane4callnextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLane4callnextActionPerformed
-        Patient patient = manager.callNextPatient(1);
-
-        if (patient == null) {
-            javax.swing.JOptionPane.showMessageDialog(
-                this, "No waiting patients in Lane 4."
-            );
-        } else {
-            javax.swing.JOptionPane.showMessageDialog(
-                this,
-                "Now Serving\n"
-                + "Queue Number: " + patient.getQueueNumber()
-                + "\nPatient ID: " + patient.getPatientId()
-            );
-        }
-
-        refreshQueues();
+        callNextPatient(4);
     }//GEN-LAST:event_btnLane4callnextActionPerformed
 
     private void btnLane3callnextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLane3callnextActionPerformed
-        Patient patient = manager.callNextPatient(1);
-
-        if (patient == null) {
-            javax.swing.JOptionPane.showMessageDialog(
-                this, "No waiting patients in Lane 3."
-            );
-        } else {
-            javax.swing.JOptionPane.showMessageDialog(
-                this,
-                "Now Serving\n"
-                + "Queue Number: " + patient.getQueueNumber()
-                + "\nPatient ID: " + patient.getPatientId()
-            );
-        }
-
-        refreshQueues();
+        callNextPatient(3);
     }//GEN-LAST:event_btnLane3callnextActionPerformed
 
     private void txtQueue4Lane1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtQueue4Lane1ActionPerformed
@@ -936,9 +928,9 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtQueue4Lane2ActionPerformed
 
-    private void txtQueue1Lane4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtQueue1Lane4ActionPerformed
+    private void txtQueue1Lane1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtQueue1Lane1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtQueue1Lane4ActionPerformed
+    }//GEN-LAST:event_txtQueue1Lane1ActionPerformed
 
     private void txtPatientID1Lane1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPatientID1Lane1ActionPerformed
         // TODO add your handling code here:
@@ -1111,9 +1103,9 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
     private javax.swing.JTextField txtPatientID4Lane2;
     private javax.swing.JTextField txtPatientID4Lane3;
     private javax.swing.JTextField txtPatientID4Lane4;
+    private javax.swing.JTextField txtQueue1Lane1;
     private javax.swing.JTextField txtQueue1Lane2;
     private javax.swing.JTextField txtQueue1Lane3;
-    private javax.swing.JTextField txtQueue1Lane4;
     private javax.swing.JTextField txtQueue1lane4;
     private javax.swing.JTextField txtQueue2Lane1;
     private javax.swing.JTextField txtQueue2Lane2;
@@ -1130,13 +1122,84 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     // Refresh all four waiting lanes
-    private void refreshQueues() {
+        private void refreshQueues() {
 
-        displayLane(1, txtLane1);
-        displayLane(2, txtLane2);
-        displayLane(3, txtLane3);
-        displayLane(4, txtLane4);
-    }
+            displayLane(1,
+                new javax.swing.JTextField[]{
+                    txtQueue1Lane1, txtQueue2Lane1,
+                    txtQueue3Lane1, txtQueue4Lane1
+                },
+                new javax.swing.JTextField[]{
+                    txtPatientID1Lane1, txtPatientID2Lane1,
+                    txtPatientID3Lane1, txtPatientID4Lane1
+                }
+            );
+
+            displayLane(2,
+                new javax.swing.JTextField[]{
+                    txtQueue1Lane2, txtQueue2Lane2,
+                    txtQueue3Lane2, txtQueue4Lane2
+                },
+                new javax.swing.JTextField[]{
+                    txtPatientID1Lane2, txtPatientID2Lane2,
+                    txtPatientID3Lane2, txtPatientID4Lane2
+                }
+            );
+
+            displayLane(3,
+                new javax.swing.JTextField[]{
+                    txtQueue1Lane3, txtQueue2Lane3,
+                    txtQueue3Lane3, txtQueue4Lane3
+                },
+                new javax.swing.JTextField[]{
+                    txtPatientID1Lane3, txtPatientID2Lane3,
+                    txtPatientID3Lane3, txtPatientID4Lane3
+                }
+            );
+
+            displayLane(4,
+                new javax.swing.JTextField[]{
+                    txtQueue1lane4, txtQueue2Lane4,
+                    txtQueue3Lane4, txtQueue4Lane4
+                },
+                new javax.swing.JTextField[]{
+                    txtPatientID1Lane4, txtPatientID2Lane4,
+                    txtPatientID3Lane4, txtPatientID4Lane4
+                }
+            );
+        }
+
+        // Display the first four patients in a lane
+        private void displayLane(int laneNumber,
+                javax.swing.JTextField[] queueFields,
+                javax.swing.JTextField[] idFields) {
+
+            PatientQueue queue = manager.getLane(laneNumber);
+
+            for (int i = 0; i < 4; i++) {
+
+                queueFields[i].setEditable(false);
+                idFields[i].setEditable(false);
+
+                if (i < queue.getSize()) {
+
+                    Patient patient = queue.getAt(i);
+
+                    queueFields[i].setText(
+                        String.valueOf(patient.getQueueNumber())
+                    );
+
+                    idFields[i].setText(
+                        patient.getPatientId()
+                    );
+
+                } else {
+
+                    queueFields[i].setText("");
+                    idFields[i].setText("");
+                }
+            }
+        }
 
     // Display patients in a specific lane
     private void displayLane(int laneNumber,
