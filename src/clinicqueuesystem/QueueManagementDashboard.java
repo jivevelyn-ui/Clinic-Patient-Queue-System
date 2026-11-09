@@ -13,10 +13,6 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
 
         this.manager = manager;
 
-        txtLane1.setEditable(false);
-        txtLane2.setEditable(false);
-        txtLane3.setEditable(false);
-        txtLane4.setEditable(false);
 
         refreshQueues();
     }
@@ -32,7 +28,6 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jToolBar1 = new javax.swing.JToolBar();
         btnSearchPatient = new javax.swing.JButton();
         btnRegistration = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
@@ -45,31 +40,55 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
-        txtQueue1Lane1 = new javax.swing.JTextField();
+        txtQueue4Lane1 = new javax.swing.JTextField();
         txtQueue2Lane1 = new javax.swing.JTextField();
         txtQueue3Lane1 = new javax.swing.JTextField();
-        txtQueue4lane1 = new javax.swing.JTextField();
         btnLane1callnext = new javax.swing.JButton();
+        txtQueue1Lane4 = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        txtPatientID1Lane1 = new javax.swing.JTextField();
+        txtPatientID2Lane1 = new javax.swing.JTextField();
+        txtPatientID3Lane1 = new javax.swing.JTextField();
+        txtPatientID4Lane1 = new javax.swing.JTextField();
         jPanel7 = new javax.swing.JPanel();
         txtQueue1Lane2 = new javax.swing.JTextField();
         txtQueue2Lane2 = new javax.swing.JTextField();
         txtQueue3Lane2 = new javax.swing.JTextField();
         txtQueue4Lane2 = new javax.swing.JTextField();
         btnLane2callnext = new javax.swing.JButton();
-        jPanel8 = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        txtPatientID1Lane2 = new javax.swing.JTextField();
+        txtPatientID2Lane2 = new javax.swing.JTextField();
+        txtPatientID3Lane2 = new javax.swing.JTextField();
+        txtPatientID4Lane2 = new javax.swing.JTextField();
+        jPanel10 = new javax.swing.JPanel();
         txtQueue1Lane3 = new javax.swing.JTextField();
         txtQueue2Lane3 = new javax.swing.JTextField();
         txtQueue3Lane3 = new javax.swing.JTextField();
         txtQueue4Lane3 = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        txtPatientID1Lane3 = new javax.swing.JTextField();
+        txtPatientID2Lane3 = new javax.swing.JTextField();
+        txtPatientID3Lane3 = new javax.swing.JTextField();
+        txtPatientID4Lane3 = new javax.swing.JTextField();
         btnLane3callnext = new javax.swing.JButton();
-        jPanel9 = new javax.swing.JPanel();
-        txtQueue4lane4 = new javax.swing.JTextField();
-        txtQueue2lane4 = new javax.swing.JTextField();
+        jPanel11 = new javax.swing.JPanel();
         txtQueue1lane4 = new javax.swing.JTextField();
-        txtQueue3lane4 = new javax.swing.JTextField();
+        txtQueue2Lane4 = new javax.swing.JTextField();
+        txtQueue3Lane4 = new javax.swing.JTextField();
+        txtQueue4Lane4 = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        txtPatientID1Lane4 = new javax.swing.JTextField();
+        txtPatientID2Lane4 = new javax.swing.JTextField();
+        txtPatientID3Lane4 = new javax.swing.JTextField();
+        txtPatientID4Lane4 = new javax.swing.JTextField();
         btnLane4callnext = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -87,7 +106,7 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(184, 184, 184)
+                .addGap(310, 310, 310)
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -98,8 +117,6 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addContainerGap(17, Short.MAX_VALUE))
         );
-
-        jToolBar1.setRollover(true);
 
         btnSearchPatient.setBackground(new java.awt.Color(0, 0, 204));
         btnSearchPatient.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -135,14 +152,14 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(47, 47, 47)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(82, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(6, 6, 6)
-                        .addComponent(jLabel8)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jLabel8))
+                    .addComponent(jLabel4))
+                .addGap(80, 80, 80))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -167,12 +184,10 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(44, 44, 44)
+                .addGap(79, 79, 79)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(jLabel9)))
+                    .addComponent(jLabel9)
+                    .addComponent(jLabel5))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -198,11 +213,13 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel7)
+                .addGap(77, 77, 77))
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel7))
+                .addGap(76, 76, 76)
+                .addComponent(jLabel10)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
@@ -216,13 +233,13 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
 
         jPanel5.setBackground(new java.awt.Color(204, 204, 255));
 
-        jLabel6.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel6.setText("LANE 3");
-
         jLabel11.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("REGULAR");
+
+        jLabel6.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel6.setText("LANE 3");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -233,22 +250,21 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel11)
                     .addComponent(jLabel6))
-                .addGap(47, 47, 47))
+                .addGap(83, 83, 83))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel11)
-                .addContainerGap())
+                .addComponent(jLabel11))
         );
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 204));
 
-        txtQueue1Lane1.addActionListener(new java.awt.event.ActionListener() {
+        txtQueue4Lane1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtQueue1Lane1ActionPerformed(evt);
+                txtQueue4Lane1ActionPerformed(evt);
             }
         });
 
@@ -264,12 +280,6 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
             }
         });
 
-        txtQueue4lane1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtQueue4lane1ActionPerformed(evt);
-            }
-        });
-
         btnLane1callnext.setBackground(new java.awt.Color(204, 0, 51));
         btnLane1callnext.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         btnLane1callnext.setForeground(new java.awt.Color(255, 255, 255));
@@ -280,44 +290,99 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
             }
         });
 
+        txtQueue1Lane4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtQueue1Lane4ActionPerformed(evt);
+            }
+        });
+
+        jLabel12.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel12.setText("QUEUE NO.");
+
+        jLabel13.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel13.setText("PATIENT ID");
+
+        txtPatientID1Lane1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPatientID1Lane1ActionPerformed(evt);
+            }
+        });
+
+        txtPatientID2Lane1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPatientID2Lane1ActionPerformed(evt);
+            }
+        });
+
+        txtPatientID3Lane1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPatientID3Lane1ActionPerformed(evt);
+            }
+        });
+
+        txtPatientID4Lane1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPatientID4Lane1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(txtQueue3Lane1, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)
+                    .addComponent(txtQueue2Lane1, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtQueue4Lane1, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtQueue1Lane4, javax.swing.GroupLayout.Alignment.LEADING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtQueue1Lane1)
-                    .addComponent(txtQueue2Lane1)
-                    .addComponent(txtQueue3Lane1, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(txtPatientID1Lane1)
+                    .addComponent(txtPatientID2Lane1)
+                    .addComponent(txtPatientID3Lane1)
+                    .addComponent(txtPatientID4Lane1, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(32, 32, 32)
+                .addGap(24, 24, 24)
+                .addComponent(jLabel12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                .addComponent(jLabel13)
+                .addGap(17, 17, 17))
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(64, 64, 64)
                 .addComponent(btnLane1callnext)
-                .addContainerGap(34, Short.MAX_VALUE))
-            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel6Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(txtQueue4lane1)
-                    .addContainerGap()))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txtQueue1Lane1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(jLabel13))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtQueue2Lane1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtQueue1Lane4, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPatientID1Lane1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtQueue3Lane1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtQueue2Lane1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPatientID2Lane1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtQueue3Lane1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPatientID3Lane1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtQueue4Lane1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPatientID4Lane1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnLane1callnext)
-                .addGap(30, 30, 30))
-            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                    .addContainerGap(155, Short.MAX_VALUE)
-                    .addComponent(txtQueue4lane1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(84, 84, 84)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel7.setBackground(new java.awt.Color(255, 255, 204));
@@ -356,40 +421,95 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
             }
         });
 
+        jLabel14.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel14.setText("QUEUE NO.");
+
+        jLabel15.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel15.setText("PATIENT ID");
+
+        txtPatientID1Lane2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPatientID1Lane2ActionPerformed(evt);
+            }
+        });
+
+        txtPatientID2Lane2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPatientID2Lane2ActionPerformed(evt);
+            }
+        });
+
+        txtPatientID3Lane2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPatientID3Lane2ActionPerformed(evt);
+            }
+        });
+
+        txtPatientID4Lane2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPatientID4Lane2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtQueue1Lane2)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(txtQueue4Lane2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
+                    .addComponent(txtQueue3Lane2, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtQueue2Lane2)
-                    .addComponent(txtQueue3Lane2)
-                    .addComponent(txtQueue4Lane2))
+                    .addComponent(txtQueue1Lane2))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtPatientID1Lane2)
+                    .addComponent(txtPatientID2Lane2)
+                    .addComponent(txtPatientID3Lane2)
+                    .addComponent(txtPatientID4Lane2))
                 .addContainerGap())
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(27, 27, 27)
+                .addGap(20, 20, 20)
+                .addComponent(jLabel14)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
+                .addComponent(jLabel15)
+                .addGap(18, 18, 18))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnLane2callnext)
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addGap(62, 62, 62))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(txtQueue1Lane2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel14)
+                    .addComponent(jLabel15))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtQueue2Lane2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtQueue1Lane2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPatientID1Lane2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtQueue3Lane2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtQueue4Lane2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addComponent(btnLane2callnext)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtQueue2Lane2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPatientID2Lane2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtQueue3Lane2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPatientID3Lane2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtQueue4Lane2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPatientID4Lane2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnLane2callnext))
         );
 
-        jPanel8.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel10.setBackground(new java.awt.Color(255, 255, 204));
 
         txtQueue1Lane3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -415,6 +535,38 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
             }
         });
 
+        jLabel16.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel16.setText("QUEUE NO.");
+
+        jLabel17.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel17.setText("PATIENT ID");
+
+        txtPatientID1Lane3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPatientID1Lane3ActionPerformed(evt);
+            }
+        });
+
+        txtPatientID2Lane3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPatientID2Lane3ActionPerformed(evt);
+            }
+        });
+
+        txtPatientID3Lane3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPatientID3Lane3ActionPerformed(evt);
+            }
+        });
+
+        txtPatientID4Lane3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPatientID4Lane3ActionPerformed(evt);
+            }
+        });
+
         btnLane3callnext.setBackground(new java.awt.Color(204, 0, 51));
         btnLane3callnext.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         btnLane3callnext.setForeground(new java.awt.Color(255, 255, 255));
@@ -425,51 +577,64 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel8Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtQueue1Lane3)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(txtQueue4Lane3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
+                    .addComponent(txtQueue3Lane3, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtQueue2Lane3)
-                    .addComponent(txtQueue4Lane3)
-                    .addComponent(txtQueue3Lane3)))
-            .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                    .addComponent(txtQueue1Lane3))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtPatientID1Lane3)
+                    .addComponent(txtPatientID2Lane3)
+                    .addComponent(txtPatientID3Lane3)
+                    .addComponent(txtPatientID4Lane3))
+                .addContainerGap())
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel16)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                .addComponent(jLabel17)
+                .addGap(18, 18, 18))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnLane3callnext)
-                .addGap(0, 37, Short.MAX_VALUE))
+                .addGap(58, 58, 58))
         );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel8Layout.createSequentialGroup()
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txtQueue1Lane3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(jLabel17))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtQueue2Lane3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtQueue1Lane3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPatientID1Lane3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtQueue3Lane3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtQueue4Lane3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtQueue2Lane3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPatientID2Lane3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtQueue3Lane3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPatientID3Lane3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtQueue4Lane3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPatientID4Lane3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnLane3callnext)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel9.setBackground(new java.awt.Color(204, 255, 204));
-
-        txtQueue4lane4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtQueue4lane4ActionPerformed(evt);
-            }
-        });
-
-        txtQueue2lane4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtQueue2lane4ActionPerformed(evt);
-            }
-        });
+        jPanel11.setBackground(new java.awt.Color(255, 255, 204));
 
         txtQueue1lane4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -477,9 +642,53 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
             }
         });
 
-        txtQueue3lane4.addActionListener(new java.awt.event.ActionListener() {
+        txtQueue2Lane4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtQueue3lane4ActionPerformed(evt);
+                txtQueue2Lane4ActionPerformed(evt);
+            }
+        });
+
+        txtQueue3Lane4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtQueue3Lane4ActionPerformed(evt);
+            }
+        });
+
+        txtQueue4Lane4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtQueue4Lane4ActionPerformed(evt);
+            }
+        });
+
+        jLabel18.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel18.setText("QUEUE NO.");
+
+        jLabel19.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel19.setText("PATIENT ID");
+
+        txtPatientID1Lane4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPatientID1Lane4ActionPerformed(evt);
+            }
+        });
+
+        txtPatientID2Lane4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPatientID2Lane4ActionPerformed(evt);
+            }
+        });
+
+        txtPatientID3Lane4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPatientID3Lane4ActionPerformed(evt);
+            }
+        });
+
+        txtPatientID4Lane4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPatientID4Lane4ActionPerformed(evt);
             }
         });
 
@@ -493,37 +702,61 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtQueue2lane4)
-                    .addComponent(txtQueue4lane4)
-                    .addComponent(txtQueue3lane4)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(txtQueue4Lane4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
+                    .addComponent(txtQueue3Lane4, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtQueue2Lane4)
                     .addComponent(txtQueue1lane4))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtPatientID1Lane4)
+                    .addComponent(txtPatientID2Lane4)
+                    .addComponent(txtPatientID3Lane4)
+                    .addComponent(txtPatientID4Lane4))
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                .addContainerGap(39, Short.MAX_VALUE)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                .addComponent(jLabel19)
+                .addGap(18, 18, 18))
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGap(62, 62, 62)
                 .addComponent(btnLane4callnext)
-                .addGap(27, 27, 27))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txtQueue1lane4, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel18)
+                    .addComponent(jLabel19))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtQueue2lane4, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtQueue1lane4, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPatientID1Lane4, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtQueue3lane4, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtQueue4lane4, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtQueue2Lane4, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPatientID2Lane4, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtQueue3Lane4, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPatientID3Lane4, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtQueue4Lane4, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPatientID4Lane4, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnLane4callnext)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -532,57 +765,60 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(53, 53, 53)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnRegistration)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnSearchPatient)))))
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addGap(26, 26, 26)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(36, 36, 36))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addComponent(btnRegistration)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnSearchPatient)
+                .addGap(308, 308, 308))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jPanel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(36, 36, 36)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnRegistration)
-                    .addComponent(btnSearchPatient))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnSearchPatient)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnRegistration)
+                        .addGap(19, 19, 19))))
         );
 
         pack();
@@ -672,9 +908,9 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
         refreshQueues();
     }//GEN-LAST:event_btnLane3callnextActionPerformed
 
-    private void txtQueue1Lane1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtQueue1Lane1ActionPerformed
+    private void txtQueue4Lane1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtQueue4Lane1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtQueue1Lane1ActionPerformed
+    }//GEN-LAST:event_txtQueue4Lane1ActionPerformed
 
     private void txtQueue2Lane1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtQueue2Lane1ActionPerformed
         // TODO add your handling code here:
@@ -692,10 +928,6 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtQueue1Lane2ActionPerformed
 
-    private void txtQueue4lane1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtQueue4lane1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtQueue4lane1ActionPerformed
-
     private void txtQueue3Lane2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtQueue3Lane2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtQueue3Lane2ActionPerformed
@@ -703,6 +935,42 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
     private void txtQueue4Lane2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtQueue4Lane2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtQueue4Lane2ActionPerformed
+
+    private void txtQueue1Lane4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtQueue1Lane4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtQueue1Lane4ActionPerformed
+
+    private void txtPatientID1Lane1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPatientID1Lane1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPatientID1Lane1ActionPerformed
+
+    private void txtPatientID2Lane1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPatientID2Lane1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPatientID2Lane1ActionPerformed
+
+    private void txtPatientID3Lane1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPatientID3Lane1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPatientID3Lane1ActionPerformed
+
+    private void txtPatientID4Lane1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPatientID4Lane1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPatientID4Lane1ActionPerformed
+
+    private void txtPatientID1Lane2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPatientID1Lane2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPatientID1Lane2ActionPerformed
+
+    private void txtPatientID2Lane2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPatientID2Lane2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPatientID2Lane2ActionPerformed
+
+    private void txtPatientID3Lane2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPatientID3Lane2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPatientID3Lane2ActionPerformed
+
+    private void txtPatientID4Lane2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPatientID4Lane2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPatientID4Lane2ActionPerformed
 
     private void txtQueue1Lane3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtQueue1Lane3ActionPerformed
         // TODO add your handling code here:
@@ -720,21 +988,53 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtQueue4Lane3ActionPerformed
 
+    private void txtPatientID1Lane3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPatientID1Lane3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPatientID1Lane3ActionPerformed
+
+    private void txtPatientID2Lane3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPatientID2Lane3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPatientID2Lane3ActionPerformed
+
+    private void txtPatientID3Lane3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPatientID3Lane3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPatientID3Lane3ActionPerformed
+
+    private void txtPatientID4Lane3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPatientID4Lane3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPatientID4Lane3ActionPerformed
+
     private void txtQueue1lane4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtQueue1lane4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtQueue1lane4ActionPerformed
 
-    private void txtQueue2lane4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtQueue2lane4ActionPerformed
+    private void txtQueue2Lane4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtQueue2Lane4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtQueue2lane4ActionPerformed
+    }//GEN-LAST:event_txtQueue2Lane4ActionPerformed
 
-    private void txtQueue3lane4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtQueue3lane4ActionPerformed
+    private void txtQueue3Lane4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtQueue3Lane4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtQueue3lane4ActionPerformed
+    }//GEN-LAST:event_txtQueue3Lane4ActionPerformed
 
-    private void txtQueue4lane4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtQueue4lane4ActionPerformed
+    private void txtQueue4Lane4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtQueue4Lane4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtQueue4lane4ActionPerformed
+    }//GEN-LAST:event_txtQueue4Lane4ActionPerformed
+
+    private void txtPatientID1Lane4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPatientID1Lane4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPatientID1Lane4ActionPerformed
+
+    private void txtPatientID2Lane4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPatientID2Lane4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPatientID2Lane4ActionPerformed
+
+    private void txtPatientID3Lane4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPatientID3Lane4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPatientID3Lane4ActionPerformed
+
+    private void txtPatientID4Lane4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPatientID4Lane4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPatientID4Lane4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -771,6 +1071,14 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -778,32 +1086,47 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JToolBar jToolBar1;
-    private javax.swing.JTextField txtQueue1Lane1;
+    private javax.swing.JTextField txtPatientID1Lane1;
+    private javax.swing.JTextField txtPatientID1Lane2;
+    private javax.swing.JTextField txtPatientID1Lane3;
+    private javax.swing.JTextField txtPatientID1Lane4;
+    private javax.swing.JTextField txtPatientID2Lane1;
+    private javax.swing.JTextField txtPatientID2Lane2;
+    private javax.swing.JTextField txtPatientID2Lane3;
+    private javax.swing.JTextField txtPatientID2Lane4;
+    private javax.swing.JTextField txtPatientID3Lane1;
+    private javax.swing.JTextField txtPatientID3Lane2;
+    private javax.swing.JTextField txtPatientID3Lane3;
+    private javax.swing.JTextField txtPatientID3Lane4;
+    private javax.swing.JTextField txtPatientID4Lane1;
+    private javax.swing.JTextField txtPatientID4Lane2;
+    private javax.swing.JTextField txtPatientID4Lane3;
+    private javax.swing.JTextField txtPatientID4Lane4;
     private javax.swing.JTextField txtQueue1Lane2;
     private javax.swing.JTextField txtQueue1Lane3;
+    private javax.swing.JTextField txtQueue1Lane4;
     private javax.swing.JTextField txtQueue1lane4;
     private javax.swing.JTextField txtQueue2Lane1;
     private javax.swing.JTextField txtQueue2Lane2;
     private javax.swing.JTextField txtQueue2Lane3;
-    private javax.swing.JTextField txtQueue2lane4;
+    private javax.swing.JTextField txtQueue2Lane4;
     private javax.swing.JTextField txtQueue3Lane1;
     private javax.swing.JTextField txtQueue3Lane2;
     private javax.swing.JTextField txtQueue3Lane3;
-    private javax.swing.JTextField txtQueue3lane4;
+    private javax.swing.JTextField txtQueue3Lane4;
+    private javax.swing.JTextField txtQueue4Lane1;
     private javax.swing.JTextField txtQueue4Lane2;
     private javax.swing.JTextField txtQueue4Lane3;
-    private javax.swing.JTextField txtQueue4lane1;
-    private javax.swing.JTextField txtQueue4lane4;
+    private javax.swing.JTextField txtQueue4Lane4;
     // End of variables declaration//GEN-END:variables
 
     // Refresh all four waiting lanes
