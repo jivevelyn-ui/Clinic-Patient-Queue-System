@@ -887,7 +887,8 @@ public class QueueManagementDashboard extends javax.swing.JFrame {
                     + "\nQueue Number: " + patient.getQueueNumber()
                 );
     }//GEN-LAST:event_btnSearchPatientActionPerformed
-
+    
+    }
     private void btnLane2callnextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLane2callnextActionPerformed
         callNextPatient(2);
     }//GEN-LAST:event_btnLane2callnextActionPerformed
